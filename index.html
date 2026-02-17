@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback | Tierra Adentro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #0D2118; color: #FAF9F6; }
+        .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Efecto de selección: cuando el input está marcado, la tarjeta cambia */
+        input[type="radio"]:checked + .card-content {
+            background-color: #9C4221 !important;
+            border-color: #FAF9F6 !important;
+        }
+        .card-content { transition: all 0.3s ease; border: 1px solid rgba(250, 249, 246, 0.1); }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6 py-12">
+
+    <div class="max-w-md w-full">
+        <header class="text-center mb-8">
+            <span class="text-[#DDE5B6] uppercase tracking-[0.3em] text-[10px] font-bold">Proyecto en creación</span>
+            <h1 class="serif text-4xl italic mt-4">¿Te sumerges conmigo?</h1>
+            
+            <div class="mt-6 p-4 border border-white/10 rounded-xl bg-white/5 text-left">
+                <p class="text-white/80 text-sm leading-relaxed italic">
+                    "Hola mi nombre es Elena, estoy creando un proyecto de <strong>psicoturismo</strong> y me encantaría saber tu opinión. ¿Te gusta la idea?, ¿la usarías en un momento de saturación?"
+                </p>
+            </div>
+        </header>
+
+        <form action="https://formspree.io/f/mwvnbqrn" method="POST" class="space-y-6">
+            <input type="hidden" name="_next" value="https://tu-web-en-vercel.vercel.app/gracias">
+            
+            <div class="space-y-4">
+                <p class="text-[#DDE5B6]/60 text-[11px] font-semibold uppercase tracking-widest text-center">Selecciona tu perfil:</p>
+                
+                <label class="block cursor-pointer">
+                    <input type="radio" name="perfil" value="Mente Saturada" class="hidden" required>
+                    <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
+                        <div class="flex justify-between items-start">
+                            <span class="serif text-3xl italic text-[#9C4221]">A.</span>
+                            <div class="w-5 h-5 border-2 border-[#DDE5B6] rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full opacity-0"></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mt-2 text-white">Mi Mente</h3>
+                        <p class="text-sm text-white/50 mt-1 leading-snug">Saturación y ruido mental constante.</p>
+                    </div>
+                </label>
+
+                <label class="block cursor-pointer">
+                    <input type="radio" name="perfil" value="Vínculos" class="hidden">
+                    <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
+                        <div class="flex justify-between items-start">
+                            <span class="serif text-3xl italic text-[#9C4221]">B.</span>
+                            <div class="w-5 h-5 border-2 border-[#DDE5B6] rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full opacity-0"></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mt-2 text-white">Mis Vínculos</h3>
+                        <p class="text-sm text-white/50 mt-1 leading-snug">Distancia emocional con los que amo.</p>
+                    </div>
+                </label>
+
+                <label class="block cursor-pointer">
+                    <input type="radio" name="perfil" value="Buscador" class="hidden">
+                    <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
+                        <div class="flex justify-between items-start">
+                            <span class="serif text-3xl italic text-[#9C4221]">C.</span>
+                            <div class="w-5 h-5 border-2 border-[#DDE5B6] rounded-full flex items-center justify-center">
+                                <div class="w-2 h-2 bg-white rounded-full opacity-0"></div>
+                            </div>
+                        </div>
+                        <h3 class="text-lg font-bold mt-2 text-white">Mi Propósito</h3>
+                        <p class="text-sm text-white/50 mt-1 leading-snug">Buscando claridad en un cambio de vida.</p>
+                    </div>
+                </label>
+            </div>
+
+            <style>
+                input[type="radio"]:checked + .card-content div div div { opacity: 1; }
+            </style>
+
+            <div class="space-y-4 pt-4 border-t border-white/10">
+                <div>
+                    <label class="text-[10px] uppercase tracking-widest text-[#DDE5B6] font-bold block mb-2">¿Te gusta la propuesta?</label>
+                    <select name="opinion_proyecto" class="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white outline-none focus:border-[#9C4221] appearance-none" required>
+                        <option value="" disabled selected class="bg-[#0D2118]">Selecciona una respuesta</option>
+                        <option value="Si" class="bg-[#0D2118]">¡Sí, me encanta!</option>
+                        <option value="Interesante" class="bg-[#0D2118]">Me parece interesante</option>
+                        <option value="No" class="bg-[#0D2118]">No es lo que busco</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-[10px] uppercase tracking-widest text-[#DDE5B6] font-bold block mb-2">¿La usarías en crisis?</label>
+                    <select name="lo_usaria" class="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white outline-none focus:border-[#9C4221] appearance-none" required>
+                        <option value="" disabled selected class="bg-[#0D2118]">Selecciona una respuesta</option>
+                        <option value="Totalmente" class="bg-[#0D2118]">Totalmente</option>
+                        <option value="Quizas" class="bg-[#0D2118]">Quizás más adelante</option>
+                        <option value="No" class="bg-[#0D2118]">No creo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-[10px] uppercase tracking-widest text-[#DDE5B6] font-bold block mb-2">Tu feedback para Elena</label>
+                    <textarea name="mensaje" rows="3" placeholder="Cuéntame tu opinión sincera..." class="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white outline-none focus:border-[#9C4221]"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full bg-[#9C4221] text-white font-black py-5 rounded-2xl hover:bg-[#85351a] transition-all shadow-2xl tracking-[0.2em] text-xs uppercase">
+                Enviar mis respuestas
+            </button>
+        </form>
+
+        <footer class="mt-12 text-center">
+            <a href="https://wa.me/573192909698" class="text-[10px] uppercase tracking-widest text-[#DDE5B6] border-b border-[#DDE5B6]/30 pb-1 hover:text-white transition-colors">Hablar directamente con Elena</a>
+        </footer>
+    </div>
+
+</body>
+</html>
