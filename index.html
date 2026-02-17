@@ -116,14 +116,33 @@
                     <textarea name="mensaje" rows="3" placeholder="Cuéntame tu opinión sincera..." class="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white outline-none focus:border-[#9C4221]"></textarea>
                 </div>
             </div>
+            
+            </button>
+            <div class="space-y-4 pt-6 border-t border-white/10">
+                
+                <div class="p-4 bg-white/5 border border-white/10 rounded-xl">
+                    <p class="text-[10px] text-white/60 leading-relaxed">
+                        <strong class="text-[#DDE5B6] block mb-1">IMPORTANTE:</strong> 
+                        Este espacio es de carácter informativo y de validación de proyecto. No constituye un diagnóstico médico ni un tratamiento. Si te encuentras en una situación de emergencia o crisis inminente, por favor comunícate con las líneas de atención de tu ciudad (en Colombia Línea 106).
+                    </p>
+                </div>
 
-            <button type="submit" class="w-full bg-[#9C4221] text-white font-black py-5 rounded-2xl hover:bg-[#85351a] transition-all shadow-2xl tracking-[0.2em] text-xs uppercase">
+                <div class="flex items-start gap-3 px-2">
+                    <input type="checkbox" id="privacidad" name="aceptar_terminos" required 
+                           class="mt-1 w-4 h-4 rounded border-white/20 bg-white/5 text-[#9C4221] focus:ring-[#9C4221]">
+                    <label for="privacidad" class="text-[11px] text-white/70 leading-snug cursor-pointer">
+                        Al enviar mis respuestas, acepto que <strong>Tierra Adentro</strong> trate mis datos únicamente para fines de investigación de este proyecto.
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit" class="w-full bg-[#9C4221] text-white font-black py-5 rounded-2xl hover:bg-[#85351a] transition-all shadow-2xl tracking-[0.2em] text-xs uppercase mt-4">
                 Enviar mis respuestas
             </button>
         </form>
 
         <footer class="mt-12 text-center">
-            <a href="https://wa.me/573192909698" class="text-[10px] uppercase tracking-widest text-[#DDE5B6] border-b border-[#DDE5B6]/30 pb-1 hover:text-white transition-colors">Hablar directamente con Elena</a>
+            <a href="https://wa.me/573192909698" class="text-[10px] uppercase tracking-widest text-[#DDE5B6] border-b border-[#DDE5B6]/30 pb-1 hover:text-white transition-colors"></a>
         </footer>
     </div>
 
