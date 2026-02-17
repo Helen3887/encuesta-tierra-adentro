@@ -28,6 +28,7 @@
             <div class="mt-6 p-4 border border-white/10 rounded-xl bg-white/5 text-left">
                 <p class="text-white/80 text-sm leading-relaxed italic">
                     "Hola mi nombre es Elena, estoy creando un proyecto de <strong>psicoturismo</strong> y me encantaría saber tu opinión. ¿Te gusta la idea?, ¿la usarías en un momento de saturación?"
+                    "Vivimos en un mundo que no se detiene, donde la desconexión emocional y el agotamiento mental han llegado a límites críticos. Estoy creando Tierra Adentro porque creo que la naturaleza es el primer paso para sanar la falta de esperanza y la poca tolerancia que nos rodea. ¿Me ayudas a validar esta idea?"
                 </p>
             </div>
         </header>
@@ -36,50 +37,54 @@
             <input type="hidden" name="_next" value="https://tu-web-en-vercel.vercel.app/gracias">
             
             <div class="space-y-4">
-                <p class="text-[#DDE5B6]/60 text-[11px] font-semibold uppercase tracking-widest text-center">Selecciona tu perfil:</p>
-                
-                <label class="block cursor-pointer">
-                    <input type="radio" name="perfil" value="Mente Saturada" class="hidden" required>
-                    <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
-                        <div class="flex justify-between items-start">
-                            <span class="serif text-3xl italic text-[#9C4221]">A.</span>
-                            <div class="w-5 h-5 border-2 border-[#DDE5B6] rounded-full flex items-center justify-center">
-                                <div class="w-2 h-2 bg-white rounded-full opacity-0"></div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold mt-2 text-white">Mi Mente</h3>
-                        <p class="text-sm text-white/50 mt-1 leading-snug">Saturación y ruido mental constante.</p>
-                    </div>
-                </label>
+    <p class="text-[#DDE5B6]/60 text-[11px] font-semibold uppercase tracking-widest text-center italic">¿Dónde sientes el mayor peso hoy?</p>
+    
+    <label class="block cursor-pointer">
+        <input type="radio" name="dolor_principal" value="Agotamiento Mental" class="hidden" required>
+        <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
+            <h3 class="text-lg font-bold text-white">Agotamiento y Ruido</h3>
+            <p class="text-sm text-white/50 mt-1">Siento que mi mente nunca descansa. Me cuesta encontrar razones para calmarme.</p>
+        </div>
+    </label>
 
-                <label class="block cursor-pointer">
-                    <input type="radio" name="perfil" value="Vínculos" class="hidden">
-                    <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
-                        <div class="flex justify-between items-start">
-                            <span class="serif text-3xl italic text-[#9C4221]">B.</span>
-                            <div class="w-5 h-5 border-2 border-[#DDE5B6] rounded-full flex items-center justify-center">
-                                <div class="w-2 h-2 bg-white rounded-full opacity-0"></div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold mt-2 text-white">Mis Vínculos</h3>
-                        <p class="text-sm text-white/50 mt-1 leading-snug">Distancia emocional con los que amo.</p>
-                    </div>
-                </label>
+    <label class="block cursor-pointer">
+        <input type="radio" name="dolor_principal" value="Desconexion Emocional" class="hidden">
+        <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
+            <h3 class="text-lg font-bold text-white">Vacío o Desconexión</h3>
+            <p class="text-sm text-white/50 mt-1">Me siento solo incluso estando acompañado. He perdido la capacidad de asombro y tolerancia.</p>
+        </div>
+    </label>
 
-                <label class="block cursor-pointer">
-                    <input type="radio" name="perfil" value="Buscador" class="hidden">
-                    <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
-                        <div class="flex justify-between items-start">
-                            <span class="serif text-3xl italic text-[#9C4221]">C.</span>
-                            <div class="w-5 h-5 border-2 border-[#DDE5B6] rounded-full flex items-center justify-center">
-                                <div class="w-2 h-2 bg-white rounded-full opacity-0"></div>
-                            </div>
-                        </div>
-                        <h3 class="text-lg font-bold mt-2 text-white">Mi Propósito</h3>
-                        <p class="text-sm text-white/50 mt-1 leading-snug">Buscando claridad en un cambio de vida.</p>
-                    </div>
-                </label>
-            </div>
+    <label class="block cursor-pointer">
+        <input type="radio" name="dolor_principal" value="Busqueda de Sentido" class="hidden">
+        <div class="card-content w-full p-6 rounded-2xl bg-white/5 hover:bg-white/10 relative">
+            <h3 class="text-lg font-bold text-white">Búsqueda de Esperanza</h3>
+            <p class="text-sm text-white/50 mt-1">Estoy atravesando una crisis personal y necesito un espacio seguro para volver a querer estar aquí.</p>
+        </div>
+    </label>
+</div>
+
+<div class="space-y-4 pt-6 border-t border-white/10">
+    <div>
+        <label class="text-[10px] uppercase tracking-widest text-[#DDE5B6] font-bold block mb-2">¿Crees que un retiro en la naturaleza puede salvar vidas o prevenir crisis?</label>
+        <select name="valor_terapeutico" class="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white outline-none focus:border-[#9C4221] appearance-none" required>
+            <option value="" disabled selected class="bg-[#0D2118]">Selecciona tu sentir</option>
+            <option value="Totalmente" class="bg-[#0D2118]">Totalmente, el aislamiento urbano nos enferma</option>
+            <option value="Si" class="bg-[#0D2118]">Sí, es necesario desconectarse para sobrevivir</option>
+            <option value="Tal vez" class="bg-[#0D2118]">Tal vez, si se acompaña de guía profesional</option>
+        </select>
+    </div>
+
+    <div>
+        <label class="text-[10px] uppercase tracking-widest text-[#DDE5B6] font-bold block mb-2">¿Qué es lo que más te detiene a buscar ayuda hoy?</label>
+        <select name="barrera" class="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white outline-none focus:border-[#9C4221] appearance-none" required>
+            <option value="" disabled selected class="bg-[#0D2118]">Selecciona una opción</option>
+            <option value="Dinero" class="bg-[#0D2118]">El costo de las experiencias</option>
+            <option value="Tiempo" class="bg-[#0D2118]">No tengo tiempo para pausar</option>
+            <option value="Miedo" class="bg-[#0D2118]">Miedo a enfrentarme a mis propios pensamientos</option>
+        </select>
+    </div>
+</div>
 
             <style>
                 input[type="radio"]:checked + .card-content div div div { opacity: 1; }
